@@ -112,7 +112,17 @@ class _MyAppState extends State<MyApp> {
               )
             ],
           ),
-          drawer: Drawer(),
+          drawer: Drawer(
+            child: ListView(
+              children: [
+               DrawerHeader(
+                margin: EdgeInsets.zero,
+                padding: EdgeInsets.zero,
+                child: UserAccountsDrawerHeader(accountName: accountName, accountEmail: accountEmail),
+               )
+              ],
+            ),
+          ),
         ),
       ),
     );
